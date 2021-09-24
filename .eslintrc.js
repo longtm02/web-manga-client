@@ -9,6 +9,10 @@ module.exports = {
       version: 'detect',
     },
   },
+  plugins: [
+    "react",
+    "@typescript-eslint"
+  ],
   extends: [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -29,5 +33,17 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "react-hooks/exhaustive-deps": 0,
+    "react/display-name":0
+  },
+  globals: {
+    window: true,
+    module: true
   },
 }

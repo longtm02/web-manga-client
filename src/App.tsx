@@ -1,10 +1,21 @@
-import { Counter } from './Counter'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import DashBoard from './container/DashBoard';
+import { NotFoundPage } from './container/ErrorPage';
 
 export const App = () => {
   return (
     <>
-      <h1>React TypeScript Webpack Starter Template</h1>
-      <Counter />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={DashBoard} />
+          <Route exact path="/abc" component={DashBoard} />
+          <Route path="*">
+            <NotFoundPage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+      <ToastContainer />
     </>
-  )
-}
+  );
+};

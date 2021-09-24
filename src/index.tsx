@@ -1,4 +1,18 @@
-import ReactDOM from 'react-dom'
-import { App } from './App'
+import ReactDOM from 'react-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import { Provider } from 'react-redux';
+import { App } from './App';
+import configureStore from './store';
+import theme from './constants/theme';
+import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const store = configureStore();
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </ThemeProvider>,
+  document.getElementById('root')
+);

@@ -1,0 +1,17 @@
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+img,
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
