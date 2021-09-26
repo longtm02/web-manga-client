@@ -3,8 +3,13 @@ import { Button, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import imgLogo from './../../../../public/logo.PNG';
 import { useStyles } from './style';
+import { TYPE_MODAL_LOGIN } from '..';
 
-export default function Header() {
+interface HeaderProps {
+  handleOpenModal: (type: TYPE_MODAL_LOGIN) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ handleOpenModal }) => {
   const classes = useStyles();
 
   return (
@@ -26,10 +31,18 @@ export default function Header() {
       <div className={classes.config}>
         <a href=""> Theo dõi </a>
         <a href=""> Lịch sử </a>
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => handleOpenModal(TYPE_MODAL_LOGIN.LOGIN)}
+        >
           Đăng nhập
         </Button>
-        <Button variant="contained" color="secondary">
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => handleOpenModal(TYPE_MODAL_LOGIN.RESIGN)}
+        >
           Đăng kí
         </Button>
         {/* <IconButton>
@@ -38,4 +51,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};
+
+export default Header;

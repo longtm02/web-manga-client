@@ -4,12 +4,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
   devServer: {
+    https: true,
     hot: true,
     open: true,
     historyApiFallback: true,
-    port: process.env.PORT || 8080,
+    contentBase: './',
+    port: process.env.PORT || 3000,
   },
   plugins: [
     new CleanWebpackPlugin(),
