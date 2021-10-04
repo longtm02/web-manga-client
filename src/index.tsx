@@ -5,6 +5,8 @@ import { App } from './App';
 import configureStore from './store';
 import theme from './constants/theme';
 import './index.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const store = configureStore();
 

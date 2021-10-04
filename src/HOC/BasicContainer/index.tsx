@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import { useStyles } from './style';
 import FormModal from './FormModal/index';
@@ -10,10 +10,11 @@ export enum TYPE_MODAL_LOGIN {
   RESIGN = 'RESIGN',
 }
 
-const BasicContainer = () => {
+const BasicContainer: React.FC = (props) => {
   const classes = useStyles();
   const [openModal, setOpenModal] = useState(false);
   const [typeModal, setTypeModal] = useState(TYPE_MODAL_LOGIN.LOGIN);
+
   const closeModal = () => {
     setOpenModal(false);
   };
@@ -21,10 +22,12 @@ const BasicContainer = () => {
     setTypeModal(type);
     setOpenModal(true);
   };
+
   return (
     <div className={classes.containerFull}>
       <div className={classes.container}>
         <Header handleOpenModal={handleOpenModal} />
+        {props.children}
         <FormModal close={closeModal} open={openModal} title={typeModal}>
           {typeModal === TYPE_MODAL_LOGIN.LOGIN ? (
             <Login submit={() => {}} />

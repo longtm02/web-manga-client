@@ -11,6 +11,7 @@ export const useStyles = makeStyles(() =>
       maxWidth: 1200,
       margin: 'auto',
       background: 'white',
+      overflowX: 'hidden',
     },
   })
 );
