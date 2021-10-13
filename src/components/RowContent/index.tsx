@@ -28,7 +28,7 @@ const RowContent: React.FC<RowContentProps> = ({
         {data.map((e: any, index: number) => {
           return (
             <Grid key={index} item lg={2} md={3} sm={4} xs={6}>
-              <Card data={e} link="" />
+              <Card data={e} link={`/list/${index}`} />
             </Grid>
           );
         })}
