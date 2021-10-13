@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { Grid } from '@mui/material';
 import { useStyles } from './style';
 import { Link } from 'react-router-dom';
-import Card from './../Card/index';
+import Card from '../Card/index';
 
 interface RowContentProps {
   className?: string;

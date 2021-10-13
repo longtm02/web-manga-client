@@ -12,6 +12,7 @@ export const useStyles = makeStyles(() =>
       margin: 'auto',
       background: 'white',
       overflowX: 'hidden',
+      minHeight: '200vh',
     },
   })
 );

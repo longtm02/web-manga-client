@@ -9,10 +9,12 @@ export const useStyles = makeStyles(() =>
       padding: '12px',
       fontSize: '1.15rem',
       height: 75,
+      borderBottom: '1px solid rgba(0,0,0,0.1)',
     },
     logo: {
       maxHeight: '100%',
       width: '135px',
+      cursor: 'pointer',
       '& > img': {
         height: '57px',
       },

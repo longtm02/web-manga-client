@@ -1,8 +1,8 @@
 import BasicContainer from './../../HOC/BasicContainer/index';
 import SliderCarousel from './SliderCarousel/index';
-import RowContent from './RowContent/index';
+import RowContent from '../../components/RowContent/index';
 
-const DATA_FAKE = [
+export const DATA_FAKE = [
   {
     id: 12,
     name: 'Marietta Howe',

@@ -4,3 +4,7 @@ export const URL_MANGA_MANAGEMENT = {
   HISTORY: '/history',
   FOLLOW: '/follow',
 };
+
+export const URL_CONFIG = {
+  DASH_BOARD: '/',
+};
